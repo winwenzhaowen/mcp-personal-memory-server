@@ -37,6 +37,9 @@ JSON 配置 (Cursor/Claude Desktop):
   }
 }
 
+### 4. 系统prompt配置（以openclaw为例）
+"""更新下你的System Prompt，追加 “你拥有操作用户本地档案的权限。请遵循以下工作流： 静默观察：在与用户交流时，自动识别其身份属性（如：产品经理）、技术变更（如：Python 升级）、习惯偏好。 智能更新：一旦识别到新信息，立即调用 save_user_preference。 上下文回溯：在回答复杂问题前，先调用 get_personal_context 以确保你的建议符合用户的实际背景。"""
+
 🏗️ 技术架构 (Architecture)
 本项目采用 FastMCP 框架构建，通过定义原子化的 Tool 接口实现端到端的记忆闭环：
 
